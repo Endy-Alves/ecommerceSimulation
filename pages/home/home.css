@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: rgb(54, 130, 230);
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    color: white;
+}
+header h1{
+    margin-left: 10px;
+}
+
+header h2{
+    border: 1px solid black;
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 100%;
+    background-color: azure;
+    color: black;
+}
+header h2:hover{
+    background-color: rgb(195, 199, 199);
+}
+
+main div img{
+    height: 5rem;
+    width: 5rem;
+    background-size: cover;
+    
+}
+main div p{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 13px;
+}
+main div{
+    height: 10rem;
+    width: 10rem;
+    border: 1px solid black;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+main{
+    margin: 2rem 1rem 1rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

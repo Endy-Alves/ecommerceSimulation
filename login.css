@@ -1,0 +1,38 @@
+body, html{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+    height: 15em;
+    width: 15em;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 25px;
+    box-shadow: 10px 10px 10px 10px black;
+}
+button{
+    font-size: 20px;
+    background-color: white;
+    border: 2px solid black;
+    
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+form div{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+body{
+    background-color: rgb(49, 85, 139);
+}

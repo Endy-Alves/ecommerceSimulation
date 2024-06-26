@@ -1,0 +1,17 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+header{
+    background-color: rgb(54, 130, 230);
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+main{
+    margin-top: 3rem;
+    margin-left: 2rem;
+}
+main img{
+    height: 20rem;
+}
