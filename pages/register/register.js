@@ -2,7 +2,7 @@ const button = document.getElementById("login")
 
 button.addEventListener('click', (event)=>{
         event.preventDefault()
-        window.location.href = '/login.html'
+        window.location.href = '/index.html'
 })
 
 const register = document.getElementById('register')
