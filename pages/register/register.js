@@ -20,7 +20,8 @@ register.addEventListener('click', ()=>{
             users = {
                 nome: '',
                 email: `${email}`,
-                senha: `${pass}`
+                senha: `${pass}`,
+                comment: ''
             }
         
             localStorage.setItem('users', JSON.stringify(users))

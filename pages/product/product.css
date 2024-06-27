@@ -38,3 +38,47 @@ main img{
         font-size: 10px;
     }
 }
+
+#review{
+    background-color: rgb(221, 221, 221);
+    height: 25rem;
+    margin: 2rem;
+}
+#review h1{
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+#review label{
+    font-size: 20px;
+    margin-left: 15px;
+}
+#review input{
+    width: 70%;
+}
+#review p{
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid black;
+    width: 4rem;
+}
+#review p:hover{
+    background-color: gray;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+}
+
+.divComment{
+    margin-left: 10px;
+}
+
+@media (max-width: 750px){
+    #review input{
+        width: 90%;
+        margin-left: 15px;
+    }
+    #review label{
+        margin-left: 15px;
+    }
+}
