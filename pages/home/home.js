@@ -22,9 +22,13 @@ if (firstAuth === null || firstAuth === undefined || firstAuth === 'true') {
         title: 'Diga seu nome:',
         input: 'text',
         inputPlaceholder: 'Digite aqui',
-        showCancelButton: true,
+        inputValidator: (value) => {
+          if (!value) {
+              return 'Você precisa digitar algo!';
+          }
+      },
+        allowOutsideClick: false,
         confirmButtonText: 'Enviar',
-        cancelButtonText: 'Cancelar',
         showLoaderOnConfirm: true,
         preConfirm: (inputValue) => {
             if (!inputValue) {
@@ -39,6 +43,7 @@ if (firstAuth === null || firstAuth === undefined || firstAuth === 'true') {
     }).then((result) => {
         if (result.isConfirmed) {
             console.log("confirmado")
+            location.reload();
         } else if (result.dismiss === Swal.DismissReason.cancel) {
             console.log('Operação cancelada');
         }
