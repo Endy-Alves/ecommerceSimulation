@@ -52,15 +52,24 @@ if (firstAuth === null || firstAuth === undefined || firstAuth === 'true') {
     header.appendChild(h2)
     h2.innerHTML = `${users.nome}`
 
+    const sidebar = document.querySelector('.sidebar');
+    h2.addEventListener('click', ()=>{
+      sidebar.style.display = 'flex'
+    })
+
+    document.addEventListener('click', function(event) {
+      if (!sidebar.contains(event.target) && event.target !== h2) {
+        sidebar.style.display = 'none'; // Esconde a sidebar
+    }
+  });
+
     fetch('https://fakestoreapi.com/products')
   .then(response => response.json())
   .then(data => {
-    console.log(data);
     const main = document.getElementById('main');
     
     // Itera sobre os produtos
     data.forEach(product => {
-      console.log(product);
       
       // Cria um elemento div para cada produto
       const productDiv = document.createElement('div');
