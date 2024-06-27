@@ -1,3 +1,19 @@
+// Verifica se o usuário está logado
+function isLoggedIn() {
+  return localStorage.getItem('loggedIn') === 'true';
+}
+
+// Verifica se o usuário está logado ao carregar a página
+window.onload = function() {
+  if (!isLoggedIn()) {
+      // Se não estiver logado, redireciona para a página de login
+      window.location.href = '/index.html'; // substitua 'login.html' pelo caminho da sua página de login
+  }
+}
+
+
+
+
 const firstAuth = sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer');
 
 
@@ -22,9 +38,9 @@ if (firstAuth === null || firstAuth === undefined || firstAuth === 'true') {
         }
     }).then((result) => {
         if (result.isConfirmed) {
-            Swal.fire(`Você clicou em Enviar!`);
+            console.log("confirmado")
         } else if (result.dismiss === Swal.DismissReason.cancel) {
-            Swal.fire('Operação cancelada');
+            console.log('Operação cancelada');
         }
     });
 
@@ -76,4 +92,9 @@ if (firstAuth === null || firstAuth === undefined || firstAuth === 'true') {
 
 
 }
-
+  
+function logout() {
+  localStorage.setItem('loggedIn', 'false');
+  // Redireciona para a página de login ou outra página não autorizada
+  window.location.href = '/index.html'; // substitua 'login.html' pelo caminho da sua página de login
+}

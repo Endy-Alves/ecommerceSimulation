@@ -12,11 +12,17 @@ const users = JSON.parse(localStorage.getItem('users'))
 
 const logar = document.getElementById('login')
 
+// Verifica se o usuário está logado
+function isLoggedIn() {
+    return localStorage.getItem('loggedIn') === 'true';
+}
+
 logar.addEventListener('click', ()=>{
     const email = document.getElementById('email').value
     const pass = document.getElementById('pass').value
 
     if(email === users.email && pass === users.senha){
+        localStorage.setItem('loggedIn', 'true');
         window.location.href = '/pages/home/home.html'
         alert("Entrando com usuario")
     }
@@ -24,3 +30,4 @@ logar.addEventListener('click', ()=>{
         alert("Email ou senha incorretos!")
     }
 })
+

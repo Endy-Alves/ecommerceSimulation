@@ -36,3 +36,17 @@ form div{
 body{
     background-color: rgb(49, 85, 139);
 }
+
+@media (max-width: 700px){
+    form{
+        height: 12rem;
+        width: 12rem;
+    }
+    label, input{
+        width: 90%;
+        font-size: 15px;
+    }
+    form div button, form div p{
+        font-size: 15px;
+    }
+}
