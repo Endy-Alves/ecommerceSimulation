@@ -41,7 +41,6 @@ main img{
 
 #review{
     background-color: rgb(221, 221, 221);
-    height: 25rem;
     margin: 2rem;
 }
 #review h1{
@@ -53,13 +52,15 @@ main img{
     margin-left: 15px;
 }
 #review input{
-    width: 70%;
+    width: 98%;
+    height: 2rem;
+    margin-left: 10px;
 }
 #review p{
     text-align: center;
     font-size: 20px;
     border: 1px solid black;
-    width: 4rem;
+    margin: 5px 15px 0px 15px;
 }
 #review p:hover{
     background-color: gray;
@@ -71,6 +72,7 @@ main img{
 
 .divComment{
     margin-left: 10px;
+    margin-top: 20px;
 }
 
 @media (max-width: 750px){

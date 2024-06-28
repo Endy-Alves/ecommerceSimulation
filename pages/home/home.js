@@ -14,19 +14,19 @@ window.onload = function() {
 
 
 
-const firstAuth = sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer');
+const users = JSON.parse(localStorage.getItem('users')) || {};
 
-
-if (firstAuth === null || firstAuth === undefined || firstAuth === 'true') {
+// Verifica se o nome do usuário já foi registrado anteriormente
+if (!users.nome) {
     Swal.fire({
         title: 'Diga seu nome:',
         input: 'text',
         inputPlaceholder: 'Digite aqui',
         inputValidator: (value) => {
-          if (!value) {
-              return 'Você precisa digitar algo!';
-          }
-      },
+            if (!value) {
+                return 'Você precisa digitar algo!';
+            }
+        },
         allowOutsideClick: false,
         confirmButtonText: 'Enviar',
         showLoaderOnConfirm: true,
@@ -34,22 +34,17 @@ if (firstAuth === null || firstAuth === undefined || firstAuth === 'true') {
             if (!inputValue) {
                 Swal.showValidationMessage('Você precisa digitar algo!');
             }
-            let users = JSON.parse(localStorage.getItem('users')) || {};
-
             users.nome = inputValue;
-
             localStorage.setItem('users', JSON.stringify(users));
         }
     }).then((result) => {
         if (result.isConfirmed) {
-            console.log("confirmado")
+            console.log("Nome confirmado:", users.nome);
             location.reload();
         } else if (result.dismiss === Swal.DismissReason.cancel) {
             console.log('Operação cancelada');
         }
     });
-
-    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', 'false');
 } else {
     let users = JSON.parse(localStorage.getItem('users'))
     const header = document.getElementById('header')
