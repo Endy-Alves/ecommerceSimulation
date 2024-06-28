@@ -11,16 +11,13 @@ header{
 main{
     margin-top: 3rem;
     margin-left: 2rem;
+    margin-right: 2rem;
 }
 main img{
     height: 20rem;
 }
 
-@media (max-width: 530px){
-    main div{
-        height: 6rem;
-        width: 6rem;
-    }
+@media (max-width: 700px){
     main img{
         height: 8rem;
         width: 8rem;
@@ -82,5 +79,9 @@ main img{
     }
     #review label{
         margin-left: 15px;
+        font-size: 15px;
+    }
+    #review h1{
+        font-size: 20px;
     }
 }

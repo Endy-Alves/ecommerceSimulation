@@ -40,15 +40,15 @@ body{
 
 @media (max-width: 700px){
     form{
-        height: 15rem;
-        width: 12rem;
+        height: 20rem;
+        width: 15rem;
     }
     label, input{
         width: 90%;
-        font-size: 15px;
+        font-size: 20px;
     }
     form div button, form div p{
-        font-size: 15px;
+        font-size: 20px;
         margin: 2px;
     }
 }
