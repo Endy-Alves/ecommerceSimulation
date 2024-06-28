@@ -52,6 +52,7 @@ main img{
     width: 98%;
     height: 2rem;
     margin-left: 10px;
+    background-color: white;
 }
 #review p{
     text-align: center;
