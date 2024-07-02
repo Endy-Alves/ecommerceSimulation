@@ -5,6 +5,8 @@ function renderProduct(productId) {
             const image = data.image;
             const main = document.getElementById('main');
             const divReview = document.getElementById('review')
+            const carrinho = document.createElement(`p`)
+            carrinho.textContent = "carrinho"
 
             // Limpa o conteúdo anterior para evitar duplicação ao renderizar novamente
             main.innerHTML = '';
@@ -16,11 +18,13 @@ function renderProduct(productId) {
 
             const description = document.createElement('h4');
             description.textContent = data.description;
-            main.appendChild(description);
+
 
             const price = document.createElement('h1');
-            price.innerHTML = `R$ ${data.price.toFixed(2)}`; // Formata o preço com duas casas decimais
-            main.appendChild(price);
+            price.innerHTML = `R$ ${data.price.toFixed(2)}`;
+            main.appendChild(price);            // Formata o preço com duas casas decimais
+            main.appendChild(carrinho); //
+            main.appendChild(description);
 
             // Adiciona um input para o usuário digitar o comentário
             const inputReview = document.getElementById('inputReview');
@@ -32,6 +36,26 @@ function renderProduct(productId) {
 
             // Seleciona a área onde os comentários serão exibidos
             const reviewArea = document.getElementById('review');
+
+            console.log(carrinho)
+            carrinho.addEventListener('click', function(event){
+                carrinhoCompras = {
+                    imageProduct: `${data.image}`,
+                    priceProduct: `${data.price}`,
+                    quantityProduct: 1,
+                    productId: productId,
+                }
+                let carrinhoVirtual =JSON.parse(localStorage.getItem('carrinho')) || []
+
+                if (!Array.isArray(carrinhoVirtual)) {
+                    carrinhoVirtual = [];
+                } else{
+                    console.log('Nao eh um array')
+                }
+
+                carrinhoVirtual.push({dados: carrinhoCompras});
+                localStorage.setItem('carrinho', JSON.stringify(carrinhoVirtual))
+            })
 
             const users = JSON.parse(localStorage.getItem('users'))
 
