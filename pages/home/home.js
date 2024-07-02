@@ -67,7 +67,7 @@ if (!users.nome) {
   .then(response => response.json())
   .then(data => {
     const main = document.getElementById('main');
-    
+    console.log(data)
     // Itera sobre os produtos
     data.forEach(product => {
       
