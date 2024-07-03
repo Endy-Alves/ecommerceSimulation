@@ -1,0 +1,16 @@
+
+
+.divCarrinho{
+    display: flex;
+    margin-bottom: 1rem;
+    border: 1px solid black;
+    align-items: flex-end;
+}
+.image{
+    height: 3rem;
+}
+.price{
+    margin: 0;
+    padding: 0;
+    margin-left: 2rem;
+}

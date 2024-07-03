@@ -46,14 +46,14 @@ function renderProduct(productId) {
                     productId: productId,
                 }
                 let carrinhoVirtual =JSON.parse(localStorage.getItem('carrinho')) || []
-
+                
                 if (!Array.isArray(carrinhoVirtual)) {
                     carrinhoVirtual = [];
                 } else{
                     console.log('Nao eh um array')
                 }
 
-                carrinhoVirtual.push({dados: carrinhoCompras});
+                carrinhoVirtual.push({carrinhoCompras});
                 localStorage.setItem('carrinho', JSON.stringify(carrinhoVirtual))
             })
 

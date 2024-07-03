@@ -107,3 +107,7 @@ function logout() {
   // Redireciona para a página de login ou outra página não autorizada
   window.location.href = '/index.html'; // substitua 'login.html' pelo caminho da sua página de login
 }
+
+function carrinhoRed(){
+  window.location.href = '/pages/carrinho/carrinho.html'
+}
